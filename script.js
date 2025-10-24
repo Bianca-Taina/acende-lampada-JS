@@ -1,9 +1,13 @@
-function acender(){
-    document.getElementById("lampada").src="on.png"
-    console.log("Luz acessa")
-}
+const lampada = document.getElementById("lampada");
 
+lampada.addEventListener("mouseover",acender);
+lampada.addEventListener("mouseout",apagar);
+
+function acender(){
+    lampada.src = "on.png";
+    document.body.style.background = "#c115e4ff"
+}
 function apagar(){
-    document.getElementById("lampada").src="off.png"
-    console.log("Luz apagada")
+    lampada.src = "off.png";
+    document.body.style.background = "#222"
 }
